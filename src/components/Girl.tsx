@@ -8,7 +8,7 @@ export interface PropsType {
   onDecrement?: () => void;
 }
 
-const suffix = (n1: number) => {
+const suffix: Function = (n1: number): string => {
   const n2 = n1 % 10;
   const n3 = n1 % 100;
 
@@ -23,23 +23,25 @@ const suffix = (n1: number) => {
   return sx;
 }
 
-const Girl: Function = ({ name, age = 1, onIncrement, onDecrement }: PropsType) => {
-  if (age <= 0) { throw new Error('Not even born'); }
-  return (
-    <div className="wrapper">
-      <div className="message">
-        Hi, {name}. It's your {suffix(age)} birthday.
-      </div>
-      <div className="buttons">
-        <button className="btn" onClick={onDecrement}>
-          -
-        </button>
-        <button className="btn btn-plus" onClick={onIncrement}>
-          +
-        </button>
-      </div>
+const judge: Function = (age: number): string => (age >= 18) ? 'enter' : 'not enter';
+
+const Girl: Function = ({ name, age = 1, onIncrement, onDecrement }: PropsType) => (
+  <div className="girl-wrapper">
+    <h2>Girl</h2>
+    <div className="girl-message">
+      See if {name} can enter the party.<br />
+      Hi, {name}. It's your {suffix(age)} birthday.
+      You may {judge(age)} the party.
     </div>
-  );
-};
+    <div className="girl-buttons">
+      <button className="girl-btn" onClick={onDecrement}>
+        -
+      </button>
+      <button className="girl-btn girl-btn-plus" onClick={onIncrement}>
+        +
+      </button>
+    </div>
+  </div>
+);
 
 export default Girl;

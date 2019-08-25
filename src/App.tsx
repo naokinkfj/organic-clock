@@ -1,26 +1,23 @@
 import React from 'react';
-import Girl from './components/Girl';
-import logo from './logo.svg';
+
 import './App.css';
+import logo from './logo.svg';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app-wrapper">
+      <header className="app-header">
+        <h1>organic-clock</h1>
+        <img src={logo} className="app-logo" alt="logo" />
       </header>
-      <Girl name="Jane" />
+      <div className="app-nav">
+        <a href="/">[ Top ]</a>
+        <a href="/girl">[ Girl ]</a>
+        <a href="/contact">[ Contact ]</a>
+      </div>
+      <div className="app-message">
+        Enjoy the <span className="app-name">organic-clock</span> !!!
+      </div>
     </div>
   );
 }
