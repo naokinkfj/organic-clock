@@ -1,7 +1,7 @@
 import React from 'react';
 import './Girl.css';
 
-export interface Props {
+export interface PropsType {
   name: string;
   age?: number;
   onIncrement?: () => void;
@@ -23,7 +23,7 @@ const suffix = (n1: number) => {
   return sx;
 }
 
-const Girl: Function = ({ name, age = 1, onIncrement, onDecrement }: Props) => {
+const Girl: Function = ({ name, age = 1, onIncrement, onDecrement }: PropsType) => {
   if (age <= 0) { throw new Error('Not even born'); }
   return (
     <div className="wrapper">
