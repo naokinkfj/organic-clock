@@ -4,23 +4,11 @@
   "description": "A clock powered by React + TypeScript + Web Animations API",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
+    "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "repository": "https://github.com/minagawah/organic-clock.git",
-  "keywords": [
-    "npm",
-    "rollup",
-    "typescript"
-  ],
-  "author": "minagawah <minagawa@tokyo800.jp>",
-  "license": "WTFPL",
-  "bugs": {
-    "url": "https://github.com/minagawah/organic-clock/issues"
-  },
-  "homepage": "https://github.com/minagawah/organic-clock#readme",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -36,14 +24,33 @@
       "last 1 safari version"
     ]
   },
+  "repository": "https://github.com/minagawah/organic-clock.git",
+  "keywords": [
+    "React",
+    "TypeScript",
+    "Web Animation API"
+  ],
+  "author": "minagawah <minagawa@tokyo800.jp>",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/minagawah/organic-clock/issues"
+  },
+  "homepage": "https://github.com/minagawah/organic-clock#readme",
   "dependencies": {
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.2",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
+    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "tslint": "^5.19.0",
+    "tslint-react": "^4.0.0",
     "typescript": "^3.5.3"
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Girl from './components/Girl';
 import logo from './logo.svg';
 import './App.css';
 
@@ -19,6 +20,7 @@ const App: React.FC = () => {
           Learn React
         </a>
       </header>
+      <Girl name="Jane" />
     </div>
   );
 }

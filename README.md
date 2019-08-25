@@ -62,7 +62,39 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ```shell
 yarn create react-app . --typescript
 yarn add typescript @types/node @types/react @types/react-dom @types/jest
+yarn add prop-types
 ```
+
+Adding Redux.  
+`react-redux` is for bindings.  
+`redux-thunk` is a middleware to let you write
+action creators that return functions
+which basically receives "dispatch" and "getState" methods.
+
+```shell
+yarn add redux react-redux redux-thunk
+```
+
+Adding React-Router:
+
+```shell
+yarn add react-router-dom
+```
+
+Adding lint configurations (needs global installs):
+
+```shell
+yarn global add tslint typescript tslint-react
+
+cd organic-clock
+tslint --init
+
+yarn add tslint tslint-react
+```
+
+Consider adding hot reload:  
+https://github.com/facebook/create-react-app/issues/6503
+
 
 
 <a href="license"></a>
