@@ -28,7 +28,11 @@
 
 .app-name {
     font-weight: bold;
-    color: #2080af;
+    color: #2090af;
+}
+
+.app-clicks {
+    margin-top: 1em;
 }
 
 @keyframes app-logo-spin {

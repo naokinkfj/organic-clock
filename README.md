@@ -21,36 +21,32 @@ An attempt to use Web Animations API.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ```shell
+# React + TypeScript basic setups.
+cd organic-clock
 yarn create react-app . --typescript
 yarn add typescript @types/node @types/react @types/react-dom @types/jest
 yarn add prop-types
-```
 
-Adding Redux.  
-`react-redux` is for bindings.  
-`redux-thunk` is a middleware to let you write
-action creators that return functions
-which basically receives "dispatch" and "getState" methods.
-
-```shell
-yarn add redux react-redux redux-thunk
-```
-
-Adding React-Router:
-
-```shell
-yarn add react-router-dom
-```
-
-Adding lint configurations (needs global installs):
-
-```shell
+# Adding lint configurations.
 yarn global add tslint typescript tslint-react
-
-cd organic-clock
 tslint --init
-
 yarn add tslint tslint-react
+
+# Default CSS is too bothersome...
+yarn add normalize.css
+
+# Adding `redux-logger`.
+yarn add redux-logger
+
+# Adding Redux.  
+# `react-redux` is for bindings.  
+# `redux-thunk` is a middleware to let you write
+# action creators that return functions
+# which basically receives "dispatch" and "getState" methods.
+yarn add redux react-redux redux-thunk
+
+# Adding React-Router.
+yarn add react-router-dom
 ```
 
 
@@ -92,6 +88,12 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 <a id="notes"></a>
 ## 4. Notes
+
+```shell
+Type 'Element' is missing the following properties from type 'PartyPropsType': place, number  TS2739
+```
+
+https://github.com/DefinitelyTyped/DefinitelyTyped/issues/31734#issuecomment-450350193
 
 
 <a href="license"></a>

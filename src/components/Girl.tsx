@@ -1,12 +1,6 @@
 import React from 'react';
+import { PropsType } from '../redux/modules/Girl';
 import './Girl.css';
-
-export interface PropsType {
-  name: string;
-  age?: number;
-  onIncrement?: () => void;
-  onDecrement?: () => void;
-}
 
 const suffix: Function = (n1: number): string => {
   const n2 = n1 % 10;
@@ -23,14 +17,14 @@ const suffix: Function = (n1: number): string => {
   return sx;
 }
 
-const judge: Function = (age: number): string => (age >= 18) ? 'enter' : 'not enter';
+const judge: Function = (age: number): string => (age >= 18) ? 'enter' : 'NOT enter';
 
-const Girl: Function = ({ name, age = 1, onIncrement, onDecrement }: PropsType) => (
+const Girl: Function = ({ name = ' ', age = 1, onIncrement, onDecrement }: PropsType) => (
   <div className="girl-wrapper">
     <h2>Girl</h2>
     <div className="girl-message">
-      See if {name} can enter the party.<br />
-      Hi, {name}. It's your {suffix(age)} birthday.
+      See if &lt;{name}&gt; can enter the party.<br />
+      Hi, &lt;{name}&gt;. It is your {suffix(age)} birthday.
       You may {judge(age)} the party.
     </div>
     <div className="girl-buttons">
