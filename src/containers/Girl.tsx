@@ -1,15 +1,15 @@
 import Girl from '../components/Girl';
+import { AppState } from '../redux/create';
 import { connect, Dispatch } from 'react-redux';
 import {
-  StoreStateType,
   AgeActionType,
   incrementAge,
   decrementAge
 } from '../redux/modules/Girl';
 
-export const mapStateToProps: Function = (state: StoreStateType) => ({
-  name: state.name,
-  age: state.age,
+export const mapStateToProps: Function = (state: AppState) => ({
+  name: state.girl.name,
+  age: state.girl.age
 });
 
 export const mapDispatchToProps: Function = (dispatch: Dispatch<AgeActionType>) => ({

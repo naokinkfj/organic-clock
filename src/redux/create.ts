@@ -1,16 +1,19 @@
 // import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { createStore, combineReducers } from 'redux';
 // import { createLogger } from 'redux-logger';
-import { GirlReducer } from './modules/Girl';
+import { GirlReducer, StoreStateType } from './modules/Girl';
 
 // const loggerMiddleware = createLogger();
 // 
 // const createStoreWithMiddleware = applyMiddleware(
 //   loggerMiddleware
 // )(createStore);
+export interface AppState {
+  girl: StoreStateType;
+}
 
 const rootReducer = combineReducers({
-  GirlReducer,
+  girl: GirlReducer,
 });
 
 //////// createStore<StoreStateType, AgeActionType, any, any>(...)
